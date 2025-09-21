@@ -37,7 +37,7 @@
                     <li><span class="font-semibold">09:00</span> เดินทางไปหอสักการะฟ้าเทียนถาน</li>
                     <li><span class="font-semibold">09:30 - 13:00</span> เดินชมความยิ่งใหญ่ของหอสักการะฟ้า</li>
                     <li><span class="font-semibold">13:00 - 14:00</span> รับประทานอาหารกลางวันใกล้เคียง</li>
-                    <li><span class="font-semibold">14:30 - 17:00</span> เดินทางและเดินเล่นที่ถนนเฉียนเหมิน</li>
+                    <li><span class="font-semibold">14:30 - 17:00</span> เดินทางและเดินเล่นที่ถนนเฉียนเหมิน (<a href="#" id="qianmen-trigger" class="underline text-blue-600 hover:text-blue-800">Qianmen Street</a>)</li>
                     <li><span class="font-semibold">17:00 - 19:00</span> รับประทานอาหารเย็นและช้อปปิ้ง</li>
                 </ul>
             </div>
@@ -67,6 +67,59 @@
                 </figure>
             </div>
         </section>
+
+        <!-- Qianmen Street Modal -->
+        <div id="qianmen-modal" class="fixed inset-0 z-50 hidden" role="dialog" aria-modal="true" aria-labelledby="qianmen-title">
+            <div data-overlay class="absolute inset-0 bg-black/50"></div>
+            <div class="relative mx-auto my-10 w-11/12 max-w-2xl">
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                    <div class="flex items-center justify-between px-5 py-4 border-b">
+                        <h3 id="qianmen-title" class="text-lg font-bold text-gray-800">Qianmen Street — ร้านดังและของกินยอดนิยม</h3>
+                        <button type="button" data-close class="text-gray-500 hover:text-gray-700" aria-label="Close">✕</button>
+                    </div>
+                    <div class="p-5 text-sm text-gray-700 space-y-4 max-h-[70vh] overflow-auto">
+                        <div>
+                            <p class="font-semibold text-gray-800 mb-1">ร้านเป็ดปักกิ่ง</p>
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>Quanjude Roast Duck (全聚德烤鸭店) — เป็ดปักกิ่งในตำนาน สาขาบนถนน Qianmen หนังกรอบ เนื้อนุ่ม บริการดี</li>
+                                <li>Siji Minfu Roast Duck (四季民福烤鸭店) — เป็ดย่างซอมหอมกรอบ เนื้อฉ่ำ เครื่องเคียงครบ ฮิตในหมู่คนท้องถิ่น</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-800 mb-1">Hotpot & ต้มตุ๋น</p>
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>Dong Lai Shun Mutton Hot Pot (东来顺) — หม้อไฟเนื้อแกะต้นตำรับ หม้อทองเหลือง น้ำจิ้มงาพิเศษ</li>
+                                <li>Zhengyang Yidong — หม้อไฟสไตล์ปักกิ่ง ซุปใส เนื้อหลากชนิด ผักสด บรรยากาศคลาสสิกต้นถนน Qianmen</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-800 mb-1">ร้านขนม-อาหารจีนโบราณ</p>
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>Duyichu Shaomai (都一处烧卖) — ขนมจีบโบราณกว่า 280 ปี พร้อมเมนูอบ/ทอด</li>
+                                <li>Baodufeng (爆肚冯) — เครื่องในตุ๋นสไตล์ปักกิ่ง รสเข้มข้น</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-800 mb-1">สตรีทฟู้ดยอดนิยม</p>
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>Fang Zhuan Chang 69 (方砖厂69号炸酱面) — บะหมี่จางเจียงมิชลินหลายปีซ้อน</li>
+                                <li>Awentangbao — เซียวหลงเปาไส้ฉ่ำ ราคาเป็นมิตร</li>
+                                <li>Xianyukou Food Street & Dashilar Food City — รวมสตรีทฟู้ด/ขนมพื้นเมือง เช่น ถังหูลู่ Roujiamo</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-800 mb-1">ร้านกาแฟ-ขนมหวาน</p>
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>People’s Café (人民咖啡馆) — คาเฟ่สไตล์จีนคลาสสิก เมนูกาแฟธีม “Fa Cai”</li>
+                            </ul>
+                        </div>
+                        <div class="pt-2">
+                            <button type="button" data-close class="px-4 py-2 rounded-lg bg-gray-800 text-white hover:bg-gray-700">ปิด</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Day 2 -->
         <section class="bg-orange-50 p-6 rounded-2xl mb-8 border-l-4 border-orange-500">
@@ -164,7 +217,198 @@
                 <span class="text-3xl" aria-hidden="true">🗓️</span>
                 <div>
                     <h2 class="text-xl sm:text-2xl font-bold text-gray-800">วันที่ 4</h2>
-                    <p class="text-sm text-gray-500">17 ต.ค. — Summer Palace Long Corridor + ป่า Baiwangshan</p>
+                    <p class="text-sm text-gray-500">17 ต.ค. — จัตุรัสเทียนอันเหมิน + ตรอกฮูตง</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-xl p-4 shadow-sm mb-4">
+                <h3 class="font-bold text-gray-800 mb-2">รายละเอียดเวลา</h3>
+                <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                    <li><span class="font-semibold">09:00</span> เดินทางสู่จัตุรัสเทียนอันเหมิน</li>
+                    <li><span class="font-semibold">09:30 - 12:00</span> ชมความยิ่งใหญ่ของจัตุรัสและสถานที่สำคัญใกล้เคียง</li>
+                    <li><span class="font-semibold">12:00 - 13:00</span> รับประทานอาหารกลางวัน</li>
+                    <li><span class="font-semibold">13:30 - 17:00</span> เดินเล่นและถ่ายรูปในตรอกฮูตง (<a href="#" id="nanluo-trigger" class="underline text-blue-600 hover:text-blue-800">Nanluoguxiang</a>)</li>
+                </ul>
+            </div>
+            <div class="bg-white rounded-xl p-4 shadow-sm mb-4">
+                <h3 class="font-bold text-gray-800 mb-2">แนะนำร้านอาหาร</h3>
+                <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                    <li><span class="font-semibold">Yulan Hotpot:</span> ร้านสุกี้หม้อไฟสไตล์ปักกิ่ง</li>
+                    <li><span class="font-semibold">Hutong Kitchen:</span> ร้านอาหารจีนในตรอกฮูตง (ระวังชื่ออาจคล้ายร้านในฮ่องกง)</li>
+                    <li><span class="font-semibold">Wuyutai Tea:</span> ร้านไอศกรีมชาและชาในตรอกฮูตง</li>
+                </ul>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <!-- Tiananmen Square -->
+                <figure class="bg-white rounded-xl p-3 shadow-md">
+                    <img loading="lazy" class="w-full h-56 object-cover rounded-xl place-img"
+                         src="https://cdn.britannica.com/59/129159-050-75E7FB3C/Tiananmen-end-Beijing.jpg"
+                         alt="จัตุรัสเทียนอันเหมิน (Tiananmen Square)" />
+                    <figcaption class="mt-3 text-sm text-gray-700 font-medium">จัตุรัสเทียนอันเหมิน (Tiananmen Square)</figcaption>
+                </figure>
+
+                <!-- Hutong alley -->
+                <figure class="bg-white rounded-xl p-3 shadow-md">
+                    <img loading="lazy" class="w-full h-56 object-cover rounded-xl place-img"
+                         src="https://www.eastchinatrip.com/wp-content/uploads/4.-%E7%83%9F%E8%A2%8B%E6%96%9C%E8%A1%97.jpg"
+                         alt="ตรอกฮูตง / Nanluoguxiang Hutong" />
+                    <figcaption class="mt-3 text-sm text-gray-700 font-medium">ตรอกฮูตง (Nanluoguxiang / Hutong)</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Nanluoguxiang Modal -->
+        <div id="nanluo-modal" class="fixed inset-0 z-50 hidden" role="dialog" aria-modal="true" aria-labelledby="nanluo-title">
+            <div data-overlay class="absolute inset-0 bg-black/50"></div>
+            <div class="relative mx-auto my-10 w-11/12 max-w-2xl">
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                    <div class="flex items-center justify-between px-5 py-4 border-b">
+                        <h3 id="nanluo-title" class="text-lg font-bold text-gray-800">Nanluoguxiang — ร้านดังและของกินยอดนิยม</h3>
+                        <button type="button" data-close class="text-gray-500 hover:text-gray-700" aria-label="Close">✕</button>
+                    </div>
+                    <div class="p-5 text-sm text-gray-700 space-y-4 max-h-[70vh] overflow-auto">
+                        <div>
+                            <p class="font-semibold text-gray-800 mb-1">ร้านอาหารชื่อดัง</p>
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>Jingmo Beijing Restaurant — เป็ดปักกิ่ง Jasmine Roast Duck แป้งอุ่น ซอสมะลิ เนื้อนุ่ม</li>
+                                <li>Guiwei Grilled Wings — ปีกไก่ย่างหลายรส กรอบนอกนุ่มใน และขนมปิ้ง</li>
+                                <li>Daoxiang Village — ขนมโบราณ เค้กมะพร้าว ลิ้นวัว ดอกอินทผลัม เหมาะซื้อกลับ</li>
+                                <li>Lanyuezhai — อาหารซินเจียง/บาร์บีคิวแกะ รสเข้มข้น</li>
+                                <li>TRB Hutong — อาหารยุโรปโมเดิร์น ในบ้านจีนโบราณ บรรยากาศหรู</li>
+                                <li>Lost Heaven — อาหารจีนยูนนานและเอเชียตะวันออกเฉียงใต้</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-800 mb-1">ของกินข้างทางยอดนิยม</p>
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>Jianbing — เครปจีนใส่ไข่และเครื่อง กินเล่นอร่อย</li>
+                                <li>Tanghulu — ผลไม้เสียบไม้เคลือบน้ำตาล สีสวยหวาน</li>
+                                <li>Roujiamo — ขนมปังจีนสอดไส้เนื้อ ฮัมเบอร์เกอร์จีน</li>
+                                <li>Zhajiangmian — บะหมี่ราดซอสถั่วเหลืองกับหมู แบบปักกิ่ง</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-800 mb-1">คาเฟ่/ร้านกาแฟ</p>
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>VOYAGE COFFEE — คาเฟ่ในเรือนจีนโบราณ มุมถ่ายรูปสวย</li>
+                                <li>Yuangu Tea Cafe — ร้านชาสวย เสิร์ฟชา/ขนมแบบจีนเก่า</li>
+                            </ul>
+                        </div>
+                        <div class="pt-2">
+                            <button type="button" data-close class="px-4 py-2 rounded-lg bg-gray-800 text-white hover:bg-gray-700">ปิด</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 5 -->
+        <section class="bg-yellow-50 p-6 rounded-2xl mb-8 border-l-4 border-yellow-500">
+            <div class="flex items-center space-x-4 mb-4">
+                <span class="text-3xl" aria-hidden="true">🗓️</span>
+                <div>
+                    <h2 class="text-xl sm:text-2xl font-bold text-gray-800">วันที่ 5</h2>
+                    <p class="text-sm text-gray-500">18 ต.ค. — Five Great Avenues + Tianjin Eye</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-xl p-4 shadow-sm mb-4">
+                <h3 class="font-bold text-gray-800 mb-2">รายละเอียดเวลา</h3>
+                <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                    <li><span class="font-semibold">09:00 - 10:30</span> เดินสำรวจ Five Great Avenues (Wudadao) ถ่ายรูปสถาปัตยกรรมยุโรป</li>
+                    <li><span class="font-semibold">10:30 - 11:30</span> สำรวจและช้อปปิ้งที่ Ancient Culture Street พร้อมชิมของว่างท้องถิ่น</li>
+                    <li><span class="font-semibold">11:30 - 12:30</span> ทานอาหารเที่ยงในย่าน Ancient Culture Street</li>
+                    <li><span class="font-semibold">12:30 - 13:30</span> เยี่ยมชม Jingyuan Garden (Garden of Tranquility)</li>
+                    <li><span class="font-semibold">13:30 - 14:30</span> เดินทางไปชม Tianjin Eye และถ่ายภาพริมแม่น้ำ Haihe</li>
+                    <li><span class="font-semibold">15:00 - 16:00</span> ล่องเรือแม่น้ำ Haihe ชมวิวเมืองและแสงไฟยามเย็น</li>
+                    <li><span class="font-semibold">16:00 - 17:30</span> เดินเล่นย่าน Italian-style Town และ Nanshi Food Street ลองชิมอาหารท้องถิ่น</li>
+                </ul>
+            </div>
+            <div class="bg-white rounded-xl p-4 shadow-sm mb-4">
+                <h3 class="font-bold text-gray-800 mb-2">แนะนำร้านอาหาร</h3>
+                <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                    <li><span class="font-semibold">Italian-style Town:</span> ร้านอาหารตะวันตกและคาเฟ่บรรยากาศยุโรป</li>
+                    <li>
+                        <span class="font-semibold">
+                            <a href="#" id="nanshi-trigger" class="underline text-blue-600 hover:text-blue-800">Nanshi Food Street</a>:
+                        </span>
+                        ถนนอาหารยอดนิยมของเทียนจิน เหมาะลองของท้องถิ่น
+                    </li>
+                    <li><span class="font-semibold">Ancient Culture Street:</span> ร้านของฝากและของว่างพื้นเมือง</li>
+                </ul>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <!-- Tianjin Eye -->
+                <figure class="bg-white rounded-xl p-3 shadow-md">
+                    <img loading="lazy" class="w-full h-56 object-cover rounded-xl place-img"
+                         src="https://upload.wikimedia.org/wikipedia/commons/e/ee/%E5%A4%A9%E6%B4%A5%E4%B9%8B%E7%9C%BC%E5%8C%971.jpg"
+                         alt="Tianjin Eye (Ferris Wheel)" />
+                    <figcaption class="mt-3 text-sm text-gray-700 font-medium">Tianjin Eye</figcaption>
+                </figure>
+
+                <!-- European architecture in Tianjin (Five Great Avenues / European-style) -->
+                <figure class="bg-white rounded-xl p-3 shadow-md">
+                    <img loading="lazy" class="w-full h-56 object-cover rounded-xl place-img"
+                         src="https://upload.wikimedia.org/wikipedia/commons/8/81/Tianjin_Eye_and_Tianjin.jpg"
+                         alt="Five Great Avenues / European architecture in Tianjin" />
+                    <figcaption class="mt-3 text-sm text-gray-700 font-medium">สถาปัตยกรรมยุโรป (Five Great Avenues)</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Nanshi Food Street Modal -->
+        <div id="nanshi-modal" class="fixed inset-0 z-50 hidden" role="dialog" aria-modal="true" aria-labelledby="nanshi-title">
+            <div data-overlay class="absolute inset-0 bg-black/50"></div>
+            <div class="relative mx-auto my-10 w-11/12 max-w-2xl">
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                    <div class="flex items-center justify-between px-5 py-4 border-b">
+                        <h3 id="nanshi-title" class="text-lg font-bold text-gray-800">Nanshi Food Street — ของกินขึ้นชื่อและร้านแนะนำ</h3>
+                        <button type="button" data-close class="text-gray-500 hover:text-gray-700" aria-label="Close">✕</button>
+                    </div>
+                    <div class="p-5 text-sm text-gray-700 space-y-4 max-h-[70vh] overflow-auto">
+                        <div>
+                            <p class="font-semibold text-gray-800 mb-1">ของกินขึ้นชื่อ (ควรลอง)</p>
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>Goubuli Baozi (狗不理包子) — ซาลาเปาไส้แน่น เจ้าเก่าแก่ชื่อดัง</li>
+                                <li>Guifaxiang Eighteenth Street Mahua (桂发祥十八街麻花) — ขนมปังกรอบบิดเกลียว</li>
+                                <li>Erduoyan Zhagao (耳朵眼炸糕) — ขนมแป้งทอดไส้ถั่วแดง</li>
+                                <li>Beng Dou Zhang (崩豆张) — ถั่วคั่วกรอบสูตรดั้งเดิม</li>
+                                <li>Shitoumenkan Vegetarian Buns (石头门坎素包) — ซาลาเปาเจร้านเก่าแก่</li>
+                                <li>Jianbing Guozi (煎饼果子) — เครปจีน ทำสด ใส่ไข่ ซอสหวาน/เผ็ด</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-800 mb-1">ร้านแนะนำ</p>
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>Go Believe (Goubuli) — สาขาหลักของซาลาเปา Goubuli</li>
+                                <li>Guifaxiang — ร้านขนมหมี่ฮวา (Mahua) ยอดนิยม</li>
+                                <li>ร้าน Erduoyan Zhagao — เลือกเจ้าเก่าแก่รสแท้</li>
+                                <li>ร้าน Jianbing — แถวสี่แยกกลางฟู้ดสตรีท มีหลายเจ้าดัง</li>
+                                <li>Nanshi Snack Bar — ฟู้ดคอร์ตอาหารท้องถิ่นและเมนูพิเศษ</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-800 mb-1">เมนูยอดนิยมอื่น</p>
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>Guobacai (锅巴菜) — แป้งทอดราดซุป ต้นตำรับอาหารเช้า</li>
+                                <li>Donkey Roll (驴打滚) — ขนมแป้งนุ่มไส้ถั่วกวน คลุกแป้งถั่วเหลือง</li>
+                                <li>Ripe Pear Cake (熟梨糕) — ขนมแป้งนุ่มหอมลูกแพร์</li>
+                                <li>Candied Chestnuts (糖炒栗子) — เกาลัดหวาน</li>
+                            </ul>
+                        </div>
+                        <div class="pt-2">
+                            <button type="button" data-close class="px-4 py-2 rounded-lg bg-gray-800 text-white hover:bg-gray-700">ปิด</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 6 -->
+        <section class="bg-purple-50 p-6 rounded-2xl mb-8 border-l-4 border-purple-500">
+            <div class="flex items-center space-x-4 mb-4">
+                <span class="text-3xl" aria-hidden="true">🗓️</span>
+                <div>
+                    <h2 class="text-xl sm:text-2xl font-bold text-gray-800">วันที่ 6</h2>
+                    <p class="text-sm text-gray-500">19 ต.ค. — Summer Palace Long Corridor + ป่า Baiwangshan</p>
                 </div>
             </div>
             <div class="bg-white rounded-xl p-4 shadow-sm mb-4">
@@ -202,107 +446,30 @@
             </div>
         </section>
 
-        <!-- Day 5 -->
-        <section class="bg-yellow-50 p-6 rounded-2xl mb-8 border-l-4 border-yellow-500">
-            <div class="flex items-center space-x-4 mb-4">
-                <span class="text-3xl" aria-hidden="true">🗓️</span>
-                <div>
-                    <h2 class="text-xl sm:text-2xl font-bold text-gray-800">วันที่ 5</h2>
-                    <p class="text-sm text-gray-500">18 ต.ค. — Tianjin Eye + สถาปัตยกรรมยุโรป</p>
-                </div>
-            </div>
-            <div class="bg-white rounded-xl p-4 shadow-sm mb-4">
-                <h3 class="font-bold text-gray-800 mb-2">รายละเอียดเวลา</h3>
-                <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
-                    <li><span class="font-semibold">08:00</span> เดินทางสู่เมืองเทียนจิน</li>
-                    <li><span class="font-semibold">10:00 - 12:00</span> เดินทางไป Tianjin Eye และถ่ายรูป</li>
-                    <li><span class="font-semibold">12:00 - 13:00</span> รับประทานอาหารกลางวัน</li>
-                    <li><span class="font-semibold">13:30 - 16:00</span> เดินชมสถาปัตยกรรมยุโรปและย่านการค้า</li>
-                </ul>
-            </div>
-            <div class="bg-white rounded-xl p-4 shadow-sm mb-4">
-                <h3 class="font-bold text-gray-800 mb-2">แนะนำร้านอาหาร</h3>
-                <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
-                    <li><span class="font-semibold">Pattaya Thai Cuisine:</span> ร้านอาหารไทยในย่าน Italian style town</li>
-                    <li><span class="font-semibold">ร้านอาหารในย่าน Marco Polo Square:</span> มีร้านอาหารตะวันตกและร้านกาแฟให้เลือกมากมาย</li>
-                </ul>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <!-- Tianjin Eye -->
-                <figure class="bg-white rounded-xl p-3 shadow-md">
-                    <img loading="lazy" class="w-full h-56 object-cover rounded-xl place-img"
-                         src="https://upload.wikimedia.org/wikipedia/commons/e/ee/%E5%A4%A9%E6%B4%A5%E4%B9%8B%E7%9C%BC%E5%8C%971.jpg"
-                         alt="Tianjin Eye (Ferris Wheel)" />
-                    <figcaption class="mt-3 text-sm text-gray-700 font-medium">Tianjin Eye</figcaption>
-                </figure>
-
-                <!-- European architecture in Tianjin (Five Great Avenues / European-style) -->
-                <figure class="bg-white rounded-xl p-3 shadow-md">
-                    <img loading="lazy" class="w-full h-56 object-cover rounded-xl place-img"
-                         src="https://upload.wikimedia.org/wikipedia/commons/8/81/Tianjin_Eye_and_Tianjin.jpg"
-                         alt="Five Great Avenues / European architecture in Tianjin" />
-                    <figcaption class="mt-3 text-sm text-gray-700 font-medium">สถาปัตยกรรมยุโรป (Five Great Avenues)</figcaption>
-                </figure>
-            </div>
-        </section>
-
-        <!-- Day 6 -->
-        <section class="bg-purple-50 p-6 rounded-2xl mb-8 border-l-4 border-purple-500">
-            <div class="flex items-center space-x-4 mb-4">
-                <span class="text-3xl" aria-hidden="true">🗓️</span>
-                <div>
-                    <h2 class="text-xl sm:text-2xl font-bold text-gray-800">วันที่ 6</h2>
-                    <p class="text-sm text-gray-500">19 ต.ค. — จัตุรัสเทียนอันเหมิน + ตรอกฮูตง</p>
-                </div>
-            </div>
-            <div class="bg-white rounded-xl p-4 shadow-sm mb-4">
-                <h3 class="font-bold text-gray-800 mb-2">รายละเอียดเวลา</h3>
-                <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
-                    <li><span class="font-semibold">09:00</span> เดินทางสู่จัตุรัสเทียนอันเหมิน</li>
-                    <li><span class="font-semibold">09:30 - 12:00</span> ชมความยิ่งใหญ่ของจัตุรัสและสถานที่สำคัญใกล้เคียง</li>
-                    <li><span class="font-semibold">12:00 - 13:00</span> รับประทานอาหารกลางวัน</li>
-                    <li><span class="font-semibold">13:30 - 17:00</span> เดินเล่นและถ่ายรูปในตรอกฮูตง (Nanluoguxiang)</li>
-                </ul>
-            </div>
-            <div class="bg-white rounded-xl p-4 shadow-sm mb-4">
-                <h3 class="font-bold text-gray-800 mb-2">แนะนำร้านอาหาร</h3>
-                <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
-                    <li><span class="font-semibold">Yulan Hotpot:</span> ร้านสุกี้หม้อไฟสไตล์ปักกิ่ง</li>
-                    <li><span class="font-semibold">Hutong Kitchen:</span> ร้านอาหารจีนในตรอกฮูตง (ระวังชื่ออาจคล้ายร้านในฮ่องกง)</li>
-                    <li><span class="font-semibold">Wuyutai Tea:</span> ร้านไอศกรีมชาและชาในตรอกฮูตง</li>
-                </ul>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <!-- Tiananmen Square -->
-                <figure class="bg-white rounded-xl p-3 shadow-md">
-                    <img loading="lazy" class="w-full h-56 object-cover rounded-xl place-img"
-                         src="https://cdn.britannica.com/59/129159-050-75E7FB3C/Tiananmen-end-Beijing.jpg"
-                         alt="จัตุรัสเทียนอันเหมิน (Tiananmen Square)" />
-                    <figcaption class="mt-3 text-sm text-gray-700 font-medium">จัตุรัสเทียนอันเหมิน (Tiananmen Square)</figcaption>
-                </figure>
-
-                <!-- Hutong alley -->
-                <figure class="bg-white rounded-xl p-3 shadow-md">
-                    <img loading="lazy" class="w-full h-56 object-cover rounded-xl place-img"
-                         src="https://www.eastchinatrip.com/wp-content/uploads/4.-%E7%83%9F%E8%A2%8B%E6%96%9C%E8%A1%97.jpg"
-                         alt="ตรอกฮูตง / Nanluoguxiang Hutong" />
-                    <figcaption class="mt-3 text-sm text-gray-700 font-medium">ตรอกฮูตง (Nanluoguxiang / Hutong)</figcaption>
-                </figure>
-            </div>
-        </section>
-
-        <!-- (Optional) Day 7 summary -->
+        <!-- Day 7 -->
         <section class="bg-gray-50 p-6 rounded-2xl mb-6 border-l-4 border-gray-500">
             <div class="flex items-center space-x-4 mb-4">
                 <span class="text-3xl" aria-hidden="true">🗓️</span>
                 <div>
-                    <h2 class="text-xl sm:text-2xl font-bold text-gray-800">วันที่ 7 (สรุป)</h2>
+                    <h2 class="text-xl sm:text-2xl font-bold text-gray-800">วันที่ 7</h2>
                     <p class="text-sm text-gray-500">20 ต.ค. — ช้อปปิ้ง / เช็คเอาท์ / เดินทางกลับ</p>
                 </div>
             </div>
-            <div class="bg-white rounded-xl p-4 shadow-sm text-sm text-gray-700">
-                <p class="mb-2 font-medium">รายละเอียดเพิ่มเติม</p>
-                <p class="text-gray-600">ในช่วงเช้าสามารถช้อปปิ้งซื้อของฝากได้ตามอัธยาศัย ก่อนเดินทางไปสนามบินเพื่อเดินทางกลับ</p>
+            <div class="bg-white rounded-xl p-4 shadow-sm mb-4">
+                <h3 class="font-bold text-gray-800 mb-2">รายละเอียดเวลา</h3>
+                <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                    <li><span class="font-semibold">09:00 - 11:30</span> เดินช้อปที่ Xidan Shopping / Beijing APM</li>
+                    <li><span class="font-semibold">12:00</span> เช็คเอาท์ (Check-out)</li>
+                    <li><span class="font-semibold">14:30</span> เดินทางไปสนามบิน</li>
+                </ul>
+            </div>
+            <div class="bg-white rounded-xl p-4 shadow-sm mb-4">
+                <h3 class="font-bold text-gray-800 mb-2">แนะนำสถานที่/ร้านอาหาร</h3>
+                <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                    <li><span class="font-semibold">Xidan:</span> ย่านช้อปปิ้งใหญ่ ร้านอาหารหลากหลาย เดินทางสะดวกด้วยรถไฟฟ้าใต้ดิน</li>
+                    <li><span class="font-semibold">Beijing APM:</span> ห้างสรรพสินค้าใจกลางเมือง มีร้านอาหารและคาเฟ่หลายแบรนด์</li>
+                    <li><span class="font-semibold">สนามบิน:</span> เผื่อเวลาเช็คอินและตรวจความปลอดภัยอย่างน้อย 2–3 ชั่วโมง</li>
+                </ul>
             </div>
         </section>
 
@@ -311,5 +478,38 @@
             ใช้เพื่อประกอบการวางแผนการท่องเที่ยว ไม่มีวัตถุประสงค์ทางการค้า
         </footer>
     </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        function wireModal(triggerId, modalId) {
+          const trigger = document.getElementById(triggerId);
+          const modal = document.getElementById(modalId);
+          if (!trigger || !modal) return;
+
+          const overlay = modal.querySelector('[data-overlay]');
+          const closeButtons = modal.querySelectorAll('[data-close]');
+
+          const open = () => {
+            modal.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+            const firstClose = modal.querySelector('[data-close]');
+            firstClose && firstClose.focus && firstClose.focus();
+          };
+          const close = () => {
+            modal.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+            trigger.focus && trigger.focus();
+          };
+
+          trigger.addEventListener('click', function (e) { e.preventDefault(); open(); });
+          overlay && overlay.addEventListener('click', close);
+          closeButtons.forEach(btn => btn.addEventListener('click', close));
+          document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !modal.classList.contains('hidden')) close(); });
+        }
+
+        wireModal('nanshi-trigger', 'nanshi-modal');
+        wireModal('nanluo-trigger', 'nanluo-modal');
+        wireModal('qianmen-trigger', 'qianmen-modal');
+      });
+    </script>
 </body>
 </html>
