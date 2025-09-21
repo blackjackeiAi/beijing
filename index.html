@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="แผนการเดินทางปักกิ่ง 7 วัน พร้อมภาพสถานที่ แนะนำเวลาเที่ยวและร้านอาหารในแต่ละวัน" />
     <title>แผนการเดินทางปักกิ่ง 7 วัน</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
         body { font-family: 'Inter', sans-serif; background-color: #f7f3f0; }
         .place-img { transition: transform .25s ease, box-shadow .25s ease; }
         .place-img:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 18px 30px rgba(0,0,0,0.12); }
@@ -22,7 +25,7 @@
         <!-- Day 1 -->
         <section class="bg-blue-50 p-6 rounded-2xl mb-8 border-l-4 border-blue-500">
             <div class="flex items-center space-x-4 mb-4">
-                <span class="text-3xl">🗓️</span>
+                <span class="text-3xl" aria-hidden="true">🗓️</span>
                 <div>
                     <h2 class="text-xl sm:text-2xl font-bold text-gray-800">วันที่ 1</h2>
                     <p class="text-sm text-gray-500">14 ต.ค. — หอสักการะฟ้าเทียนถาน + ถนนเฉียนเหมิน</p>
@@ -52,7 +55,7 @@
                     <img loading="lazy" class="w-full h-56 object-cover rounded-xl place-img"
                          src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Temple_of_Heaven_20160323_01.jpg/330px-Temple_of_Heaven_20160323_01.jpg"
                          alt="หอสักการะฟ้าเทียนถาน (Temple of Heaven)" />
-                    <figcaption class="mt-3 text-sm text-gray-700 font-medium">หอสักการะฟ้าเทียนธาน (Temple of Heaven)</figcaption>
+                    <figcaption class="mt-3 text-sm text-gray-700 font-medium">หอสักการะฟ้าเทียนถาน (Temple of Heaven)</figcaption>
                 </figure>
 
                 <!-- Qianmen Street -->
@@ -68,43 +71,44 @@
         <!-- Day 2 -->
         <section class="bg-orange-50 p-6 rounded-2xl mb-8 border-l-4 border-orange-500">
             <div class="flex items-center space-x-4 mb-4">
-                <span class="text-3xl">🗓️</span>
+                <span class="text-3xl" aria-hidden="true">🗓️</span>
                 <div>
                     <h2 class="text-xl sm:text-2xl font-bold text-gray-800">วันที่ 2</h2>
-                    <p class="text-sm text-gray-500">15 ต.ค. — Summer Palace Long Corridor + ป่า Baiwangshan</p>
+                    <p class="text-sm text-gray-500">15 ต.ค. — กำแพงเมืองจีนมู่เถียนอวี่ + กระเช้า</p>
                 </div>
             </div>
             <div class="bg-white rounded-xl p-4 shadow-sm mb-4">
                 <h3 class="font-bold text-gray-800 mb-2">รายละเอียดเวลา</h3>
                 <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
-                    <li><span class="font-semibold">09:00</span> เดินทางสู่พระราชวังฤดูร้อน</li>
-                    <li><span class="font-semibold">09:30 - 14:00</span> ล่องเรือในทะเลสาบและเดินชม Long Corridor</li>
-                    <li><span class="font-semibold">14:00 - 15:00</span> รับประทานอาหารกลางวัน</li>
-                    <li><span class="font-semibold">15:00 - 17:30</span> เดินเล่นชมใบไม้เปลี่ยนสีรอบบริเวณ</li>
+                    <li><span class="font-semibold">08:00</span> เดินทางสู่กำแพงเมืองจีนมู่เถียนอวี่</li>
+                    <li><span class="font-semibold">09:30 - 10:00</span> ขึ้นกระเช้าเพื่อชมวิว</li>
+                    <li><span class="font-semibold">10:00 - 13:00</span> เดินชมกำแพงเมืองจีน</li>
+                    <li><span class="font-semibold">13:00 - 14:00</span> รับประทานอาหารกลางวัน</li>
+                    <li><span class="font-semibold">14:00 - 15:30</span> เดินเล่นบริเวณรอบ ๆ หรือลงจากกำแพง</li>
                 </ul>
             </div>
             <div class="bg-white rounded-xl p-4 shadow-sm mb-4">
                 <h3 class="font-bold text-gray-800 mb-2">แนะนำร้านอาหาร</h3>
                 <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
-                    <li><span class="font-semibold">Fang Zhuan Fang 69:</span> ร้านก๋วยเตี๋ยวเนื้อผัดซอสพริกแบบปักกิ่งโบราณ</li>
-                    <li><span class="font-semibold">Golden Jaguar Beijing:</span> ร้านบุฟเฟต์นานาชาติ</li>
+                    <li><span class="font-semibold">ร้านอาหารในคอมเพล็กซ์:</span> มีร้านอาหารหลายประเภท เช่น อาหารจีน และ Subway</li>
+                    <li><span class="font-semibold">แผงขายสตรีทฟู้ด:</span> มีร้านค้าเล็ก ๆ ที่ขายอาหารและเครื่องดื่มอยู่ตลอดทางเดิน</li>
                 </ul>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <!-- Summer Palace Long Corridor -->
+                <!-- Mutianyu Great Wall -->
                 <figure class="bg-white rounded-xl p-3 shadow-md">
                     <img loading="lazy" class="w-full h-56 object-cover rounded-xl place-img"
-                         src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Longevity_Hill_of_the_Summer_Palace.jpg/1200px-Longevity_Hill_of_the_Summer_Palace.jpg"
-                         alt="พระราชวังฤดูร้อน (Summer Palace) - Long Corridor" />
-                    <figcaption class="mt-3 text-sm text-gray-700 font-medium">พระราชวังฤดูร้อน (Summer Palace) — Long Corridor</figcaption>
+                         src="https://cdn.getyourguide.com/image/format=auto,fit=crop,gravity=auto,quality=60,width=450,height=450,dpr=2/tour_img/087e547c9bcab070660f5352ba26036b21ee1ecb92f76949fc667c3f187f4336.jpeg"
+                         alt="กำแพงเมืองจีน มู่เถียนอวี่ (Mutianyu Great Wall)" />
+                    <figcaption class="mt-3 text-sm text-gray-700 font-medium">กำแพงเมืองจีน — มู่เถียนอวี่ (Mutianyu)</figcaption>
                 </figure>
 
-                <!-- Baiwangshan Forest Park -->
+                <!-- Mutianyu Cable Car -->
                 <figure class="bg-white rounded-xl p-3 shadow-md">
                     <img loading="lazy" class="w-full h-56 object-cover rounded-xl place-img"
-                         src="https://english.news.cn/20240401/dd832730740f4e8b971a5ed6d70796ea/bb68372fb5894ca5893f6db75517f97a.jpg"
-                         alt="ป่า Baiwangshan (สถานที่ชมใบไม้เปลี่ยนสี)" />
-                    <figcaption class="mt-3 text-sm text-gray-700 font-medium">ป่า Baiwangshan (สถานที่ชมใบไม้เปลี่ยนสี)</figcaption>
+                         src="https://www.chinabeijingprivatetour.com/upload/ueditor/image/20170911/6364074120162207035573889.jpg"
+                         alt="Mutianyu Cable Car" />
+                    <figcaption class="mt-3 text-sm text-gray-700 font-medium">กระเช้าขึ้น/ลงที่มู่เถียนอวี่ (Cable car / Toboggan)</figcaption>
                 </figure>
             </div>
         </section>
@@ -112,7 +116,7 @@
         <!-- Day 3 -->
         <section class="bg-green-50 p-6 rounded-2xl mb-8 border-l-4 border-green-500">
             <div class="flex items-center space-x-4 mb-4">
-                <span class="text-3xl">🗓️</span>
+                <span class="text-3xl" aria-hidden="true">🗓️</span>
                 <div>
                     <h2 class="text-xl sm:text-2xl font-bold text-gray-800">วันที่ 3</h2>
                     <p class="text-sm text-gray-500">16 ต.ค. — Universal Studios Beijing + Harry Potter Castle</p>
@@ -157,44 +161,43 @@
         <!-- Day 4 -->
         <section class="bg-red-50 p-6 rounded-2xl mb-8 border-l-4 border-red-500">
             <div class="flex items-center space-x-4 mb-4">
-                <span class="text-3xl">🗓️</span>
+                <span class="text-3xl" aria-hidden="true">🗓️</span>
                 <div>
                     <h2 class="text-xl sm:text-2xl font-bold text-gray-800">วันที่ 4</h2>
-                    <p class="text-sm text-gray-500">17 ต.ค. — กำแพงเมืองจีนมู่เถียนอวี่ + กระเช้า</p>
+                    <p class="text-sm text-gray-500">17 ต.ค. — Summer Palace Long Corridor + ป่า Baiwangshan</p>
                 </div>
             </div>
             <div class="bg-white rounded-xl p-4 shadow-sm mb-4">
                 <h3 class="font-bold text-gray-800 mb-2">รายละเอียดเวลา</h3>
                 <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
-                    <li><span class="font-semibold">08:00</span> เดินทางสู่กำแพงเมืองจีนมู่เถียนอวี่</li>
-                    <li><span class="font-semibold">09:30 - 10:00</span> ขึ้นกระเช้าเพื่อชมวิว</li>
-                    <li><span class="font-semibold">10:00 - 13:00</span> เดินชมกำแพงเมืองจีน</li>
-                    <li><span class="font-semibold">13:00 - 14:00</span> รับประทานอาหารกลางวัน</li>
-                    <li><span class="font-semibold">14:00 - 15:30</span> เดินเล่นบริเวณรอบ ๆ หรือลงจากกำแพง</li>
+                    <li><span class="font-semibold">09:00</span> เดินทางสู่พระราชวังฤดูร้อน</li>
+                    <li><span class="font-semibold">09:30 - 14:00</span> ล่องเรือในทะเลสาบและเดินชม Long Corridor</li>
+                    <li><span class="font-semibold">14:00 - 15:00</span> รับประทานอาหารกลางวัน</li>
+                    <li><span class="font-semibold">15:00 - 17:30</span> เดินเล่นชมใบไม้เปลี่ยนสีรอบบริเวณ</li>
                 </ul>
             </div>
             <div class="bg-white rounded-xl p-4 shadow-sm mb-4">
                 <h3 class="font-bold text-gray-800 mb-2">แนะนำร้านอาหาร</h3>
                 <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
-                    <li><span class="font-semibold">ร้านอาหารในคอมเพล็กซ์:</span> มีร้านอาหารหลายประเภท เช่น อาหารจีน และ Subway</li>
-                    <li><span class="font-semibold">แผงขายสตรีทฟู้ด:</span> มีร้านค้าเล็ก ๆ ที่ขายอาหารและเครื่องดื่มอยู่ตลอดทางเดิน</li>
+                    <li><span class="font-semibold">Fang Zhuan Fang 69:</span> ร้านก๋วยเตี๋ยวเนื้อผัดซอสพริกแบบปักกิ่งโบราณ</li>
+                    <li><span class="font-semibold">Golden Jaguar Beijing:</span> ร้านบุฟเฟต์นานาชาติ</li>
                 </ul>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <!-- Mutianyu Great Wall -->
+                <!-- Summer Palace Long Corridor -->
                 <figure class="bg-white rounded-xl p-3 shadow-md">
                     <img loading="lazy" class="w-full h-56 object-cover rounded-xl place-img"
-                         src="https://cdn.getyourguide.com/image/format=auto,fit=crop,gravity=auto,quality=60,width=450,height=450,dpr=2/tour_img/087e547c9bcab070660f5352ba26036b21ee1ecb92f76949fc667c3f187f4336.jpeg"
-                         alt="กำแพงเมืองจีน มู่เถียนอวี่ (Mutianyu Great Wall)" />
-                    <figcaption class="mt-3 text-sm text-gray-700 font-medium">กำแพงเมืองจีน — มู่เถียนอวี่ (Mutianyu)</figcaption>
+                         src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Longevity_Hill_of_the_Summer_Palace.jpg/1200px-Longevity_Hill_of_the_Summer_Palace.jpg"
+                         alt="พระราชวังฤดูร้อน (Summer Palace) - Long Corridor" />
+                    <figcaption class="mt-3 text-sm text-gray-700 font-medium">พระราชวังฤดูร้อน (Summer Palace) — Long Corridor</figcaption>
                 </figure>
 
-                <!-- Mutianyu Cable Car -->
+                <!-- Baiwangshan Forest Park -->
                 <figure class="bg-white rounded-xl p-3 shadow-md">
                     <img loading="lazy" class="w-full h-56 object-cover rounded-xl place-img"
-                         src="https://www.chinabeijingprivatetour.com/upload/ueditor/image/20170911/6364074120162207035573889.jpg"
-                         alt="Mutianyu Cable Car" />
-                    <figcaption class="mt-3 text-sm text-gray-700 font-medium">กระเช้าขึ้น/ลงที่มู่เถียนอวี่ (Cable car / Toboggan)</figcaption>
+                         src="https://english.news.cn/20240401/dd832730740f4e8b971a5ed6d70796ea/bb68372fb5894ca5893f6db75517f97a.jpg"
+                         alt="ป่า Baiwangshan (สถานที่ชมใบไม้เปลี่ยนสี)" />
+                    <figcaption class="mt-3 text-sm text-gray-700 font-medium">ป่า Baiwangshan (สถานที่ชมใบไม้เปลี่ยนสี)</figcaption>
                 </figure>
             </div>
         </section>
@@ -202,7 +205,7 @@
         <!-- Day 5 -->
         <section class="bg-yellow-50 p-6 rounded-2xl mb-8 border-l-4 border-yellow-500">
             <div class="flex items-center space-x-4 mb-4">
-                <span class="text-3xl">🗓️</span>
+                <span class="text-3xl" aria-hidden="true">🗓️</span>
                 <div>
                     <h2 class="text-xl sm:text-2xl font-bold text-gray-800">วันที่ 5</h2>
                     <p class="text-sm text-gray-500">18 ต.ค. — Tianjin Eye + สถาปัตยกรรมยุโรป</p>
@@ -246,7 +249,7 @@
         <!-- Day 6 -->
         <section class="bg-purple-50 p-6 rounded-2xl mb-8 border-l-4 border-purple-500">
             <div class="flex items-center space-x-4 mb-4">
-                <span class="text-3xl">🗓️</span>
+                <span class="text-3xl" aria-hidden="true">🗓️</span>
                 <div>
                     <h2 class="text-xl sm:text-2xl font-bold text-gray-800">วันที่ 6</h2>
                     <p class="text-sm text-gray-500">19 ต.ค. — จัตุรัสเทียนอันเหมิน + ตรอกฮูตง</p>
@@ -266,7 +269,7 @@
                 <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
                     <li><span class="font-semibold">Yulan Hotpot:</span> ร้านสุกี้หม้อไฟสไตล์ปักกิ่ง</li>
                     <li><span class="font-semibold">Hutong Kitchen:</span> ร้านอาหารจีนในตรอกฮูตง (ระวังชื่ออาจคล้ายร้านในฮ่องกง)</li>
-                    <li><span class="font-semibold">Wu Yu Tai Tea:</span> ร้านไอศกรีมชาและชาในตรอกฮูตง</li>
+                    <li><span class="font-semibold">Wuyutai Tea:</span> ร้านไอศกรีมชาและชาในตรอกฮูตง</li>
                 </ul>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -291,7 +294,7 @@
         <!-- (Optional) Day 7 summary -->
         <section class="bg-gray-50 p-6 rounded-2xl mb-6 border-l-4 border-gray-500">
             <div class="flex items-center space-x-4 mb-4">
-                <span class="text-3xl">🗓️</span>
+                <span class="text-3xl" aria-hidden="true">🗓️</span>
                 <div>
                     <h2 class="text-xl sm:text-2xl font-bold text-gray-800">วันที่ 7 (สรุป)</h2>
                     <p class="text-sm text-gray-500">20 ต.ค. — ช้อปปิ้ง / เช็คเอาท์ / เดินทางกลับ</p>
@@ -304,7 +307,8 @@
         </section>
 
         <footer class="text-center mt-6 text-sm text-gray-500">
-            
+            ภาพประกอบจาก Wikimedia Commons, Pexels และแหล่งอ้างอิงที่ระบุในคำอธิบายภาพ
+            ใช้เพื่อประกอบการวางแผนการท่องเที่ยว ไม่มีวัตถุประสงค์ทางการค้า
         </footer>
     </div>
 </body>
